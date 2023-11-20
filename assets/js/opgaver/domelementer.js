@@ -8,6 +8,11 @@ Du skal finde elementet med id="yellowFigure" og console logge det.
 */
 
 // din kode her
+const redFig = document.getElementById("redFigure")
+console.log(redFigure)
+
+const yellowFig = document.getElementById("yellowFigure")
+console.log(yellowFigure)
 
 
 /* opgave 1.2
@@ -17,7 +22,8 @@ farven på elementerne skal være blå. brug evt. elelement.style.backgroundColo
 
 
 // din kode her
-
+redFigure.style.backgroundColor = "blue"
+yellowFigure.style.backgroundColor = "blue"
 
 
 /* opgave 2.1
@@ -25,7 +31,17 @@ Du skal oprette følgende HTML elementer i Elementet med id opgaveTwo.
 - et h2 med teksten: Opgave 2.1 løsning
 - et p med teksten: Jeg har løst opgave 2.1
 */
+let nyHeader = document.createElement("h2")
+nyHeader.innerText = "Opgave 2.1 løsning"
+let element = document.getElementById("opgaveTwo")
+element.appendChild(nyHeader)
 
+
+let nyParagraf = document.createElement("p");
+nyParagraf.innerText = "Jeg har løst opgave 2.1";
+
+let eksisterendeElement = document.getElementById("opgaveTwo")
+eksisterendeElement.appendChild(nyParagraf);
 
 // din kode her
 
@@ -36,7 +52,8 @@ Du skal finde alle elementer med klassen purpleFigures og console logge resultat
 */
 
 // din kode her
-
+const purpleFig = document.getElementsByClassName("purpleFigures")
+console.log(purpleFig)
 
 /* opgave 3.2
 Du skal finde alle elementer med klassen purpleFigures og bruge array.from() til at konvertere listen
@@ -45,7 +62,7 @@ array.from beskrivelse HER: https://developer.mozilla.org/en-US/docs/Web/JavaScr
 */
 
 // din kode her
-
+console.log(Array.from());
 
 /* opgave 3.3
 Brug din array til at ændre h3 elementets, inden i purpleFigures, tekst til RED. du kan bruge
